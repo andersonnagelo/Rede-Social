@@ -1,0 +1,6 @@
+<div *ngFor= "let post of listaPosts">
+
+    <app-post [post] = "post" (postRecebeuLike)= "capturarEvento($event)" (onClickRemove)="capturarEvento($event)" 
+    ></app-post>
+    
+</div>

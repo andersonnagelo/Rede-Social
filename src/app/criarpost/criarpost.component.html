@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-5">
+      <form>
+          <div class="form-group">
+            <label for="autorPost">Autor do Post:</label>
+            <input type="text" class="form-control" name="autorPost" [(ngModel)]= "autorPost" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="textoPost">Digite o texto do Post:</label>
+            <textarea type="textArea" class="form-control" name="textoPost" [(ngModel)]="textoPost" required> </textarea>
+          </div>
+      
+          <div class="form-group" align="center">
+            <button type="submit" class="btn btn-lg btn-success" (click)="onSubmit($event);" > 
+              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Criar Post
+            </button>
+          </div>
+        </form>
+  </div>
+</div>
