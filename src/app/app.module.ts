@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing} from './app.routing';
 import { FormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
+import {PostService} from './services/post.service'
 
 
 import { AppComponent } from './app.component';
@@ -22,9 +24,10 @@ import { CriarpostComponent } from './criarpost/criarpost.component';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

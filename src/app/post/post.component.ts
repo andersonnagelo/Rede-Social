@@ -21,15 +21,13 @@ export class PostComponent implements OnInit {
   
   onClickRemove(){
     event.preventDefault();
-    this.postService.removerPost(this.post);
     this.removerPost.emit(this.post);
+    
   }
   onClickLike(post:Post){
     event.preventDefault();
-    this.deulike =! this.deulike;
-    // this.post.mudarCor = true;
-    this.postService.recebeuLike(this.post,this.deulike);
-    this.recebeuLike.emit(post);
+    this.postService.recebeuLike(this.post);
+    this.recebeuLike.emit(this.post);
   }
 
 }
